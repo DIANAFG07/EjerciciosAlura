@@ -39,4 +39,21 @@ function mostrarListaAmigo() {
     }
 }
 
+// Sortear al amigo que se encuentran en el array amigos. 
+function sortearAmigo() {
+    // Obtenemos la cantidad de elementos que contiene el array amigos y lo guardamos en una variable.
+    let cantidadAmigos = amigos.length;
+    // Si notamos que la cantidad es cero, le pedimos al usuario que por lo emnos ingrese el nombre de un amigo mandándole una alerta.
+    if (cantidadAmigos === 0) {
+        alert("No hay nombres de amigos existentes, primero debes de insertar un nombre antes de sortear.");
+    } else {
+        // Utilizamos la función random para obtener el índice aleatorio dentro del rango de la cantidad de amigos.
+        let indiceAmigo = Math.floor(Math.random() * cantidadAmigos);
+        // Guardamos resultado de html en una variable.
+        let resultadoHTML = document.querySelector("#resultado");
+        // Utilizamos el valor del índice seleccionado y lo mostramos en resultado html.
+        resultadoHTML.innerHTML = amigos[indiceAmigo];
+    }
+}
+
 
