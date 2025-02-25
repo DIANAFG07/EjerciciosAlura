@@ -20,3 +20,23 @@ function agregarAmigo() {
     }
 }
 
+// Mostrar la lista de amigos una vez insertados en el array.
+function mostrarListaAmigo() {
+    // Asignamos una variable a la lista.
+    let listaAmigos = document.querySelector("#listaAmigos");
+    // Deberá de estar limpia.
+    listaAmigos.innerHTML = "";
+    // Vamos a recorrer el array con un for para ir insertando cada uno de los valores a la lista.
+    for (let index = 0; index < amigos.length; index++) {
+        // Tomamos el índice del array cuando se recorré.
+        const element = amigos[index];
+        // Creamos un elemento html de lista y lo asignamos a una variable.
+        let listaHTML = document.createElement("li");
+        // Le insertamos cada elemento dentro de la lista.
+        listaHTML.textContent = element;
+        // Vamos agregando como elementos cada valor a la lista en HTML.
+        listaAmigos.appendChild(listaHTML);
+    }
+}
+
+
