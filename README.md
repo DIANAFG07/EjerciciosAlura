@@ -2,4 +2,4 @@
 
 # Formación Principiante en Programación G8 - ONE
 
-1.- Lógica de programación: sumérgete en la programación con JavaScript
+Python para Ciencia de Datos
